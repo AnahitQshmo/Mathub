@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SchoolFragment"
+    android:background="@drawable/back2"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:gravity="center"
+        app:layout_constraintHeight_percent="0.25"
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30dp"
+        android:text="Choose your stream and find your dream college or school. "
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        app:layout_constraintBottom_toTopOf="@id/polytech"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:gravity="center"
+        app:layout_constraintWidth_percent="0.8"
+        android:id="@+id/polytech"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:text="Polytech School/College"
+        android:background="@drawable/polytech_back"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        app:layout_constraintBottom_toTopOf="@id/physmath"/>
+    <TextView
+        android:gravity="center"
+        app:layout_constraintWidth_percent="0.7"
+        android:id="@+id/physmath"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:text="Physmath High school"
+        android:background="@drawable/physmath_back"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/polytech"
+        app:layout_constraintBottom_toTopOf="@id/quantum"/>
+
+    <TextView
+        android:gravity="center"
+        app:layout_constraintWidth_percent="0.6"
+        android:id="@+id/quantum"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:background="@drawable/quantum_back"
+        android:text="Quantum College"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/physmath"
+        app:layout_constraintBottom_toTopOf="@id/ayb"/>
+
+    <TextView
+        android:gravity="center"
+        app:layout_constraintWidth_percent="0.5"
+        android:id="@+id/ayb"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ayb_back"
+        android:text="Ayb School"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quantum"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
