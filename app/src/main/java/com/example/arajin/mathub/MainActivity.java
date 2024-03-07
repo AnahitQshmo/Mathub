@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity
 
         bottomNavigationView
                 .setOnNavigationItemSelectedListener(this);
-        bottomNavigationView.setSelectedItemId(R.id.n_home);
+        bottomNavigationView.setSelectedItemId(R.id.n_school);
     }
     HomeFragment homeFragment = new HomeFragment();
     SchoolFragment schoolFragment = new SchoolFragment();

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HighSchool"
+    android:background="@drawable/back2">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <Button
+        android:layout_marginLeft="10dp"
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"/>
+    <TextView
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:typeface="serif"
+        android:gravity="center"
+        android:id="@+id/school_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Polytech high school" />
+    <TextView
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:typeface="serif"
+        android:id="@+id/text_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="flksbbfsff"/>
+
+        <ImageView
+            android:id="@+id/school_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:typeface="serif"
+        android:id="@+id/text_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ksjflshfvsdhv"/>
+    </LinearLayout>
+
+
+
+</ScrollView>
