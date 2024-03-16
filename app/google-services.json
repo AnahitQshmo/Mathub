@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "866482438767",
+    "project_id": "mathub-7d9ba",
+    "storage_bucket": "mathub-7d9ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866482438767:android:92570590f8b8e95092439a",
+        "android_client_info": {
+          "package_name": "com.example.arajin.mathub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkQ0KX0EtG8ilS6V-8IJaXnNg7hxrNh4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -80,18 +81,18 @@ public class SchoolFragment extends Fragment {
                 onClickB(2);
             }
         });
-        ayb = view.findViewById(R.id.ayb);
-        ayb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onClickB(2);
-            }
-        });
         quantum = view.findViewById(R.id.quantum);
         quantum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickB(2);
+                onClickB(3);
+            }
+        });
+        ayb = view.findViewById(R.id.ayb);
+        ayb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickB(4);
             }
         });
 
@@ -99,18 +100,14 @@ public class SchoolFragment extends Fragment {
     }
     public void onClickB(int i ){
         String a = "";
-        switch (i){
-            case 1:
-                a = "polytech";
-            case 2:
-                a = "physmath";
-            case 3:
-                a = "ayb";
-            case 4:
-                a = "quantum";
-            default:
-                a= "quantum";
-
+        if(i == 1){
+            a = "polytech";
+        } else if (i == 2) {
+            a = "physmath";
+        } else if (i == 3) {
+            a = "quantum";
+        }else{
+            a = "ayb";
         }
 
         Intent intent = new Intent(getActivity(), HighSchool.class);
