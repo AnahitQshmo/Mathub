@@ -1,3 +1,27 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Mathub</string>
+    <string name="first">If the unknown of the equation is under the sign of the square root,then such an equation is called irrational.</string>
+    <string name="second"> Many situations in life are described by irrational equations.</string>
+    <string name="third"> First irrational equation`</string>
+    <string name="fourth"> Second irrational equation`</string>
+    <string name="fifth">The absolute value or modulus of a non-negative number 𝑥 is called the number 𝑥 itself:  The modulus of a negative number 𝑥 is called its opposite: </string>
+    <string name="sixth">|𝑥| = 𝑥</string>
+    <string name="seventh">The modulus of a negative number 𝑥 is called its opposite: |𝑥| = −𝑥.</string>
+    <string name="eight">1.|a| = 0</string>
+    <string name="ninth">2.|a * b| = |a| * |b|</string>
+    <string name="ten">3.|a/b| = |a| / |b|</string>
+    <string name="str11">4.|a|² = a²</string>
+    <string name="str12">5.|-a| = |a|</string>
+    <string name="str13">Consider the equation ∣𝑥∣=𝐴, where 𝐴 is a real number. It follows from the definition and properties of the module that the equation ∣𝑥∣=𝐴:</string>
+    <string name="str14">2) in the case of 𝐴=0, it has the only solution: 𝑥=0 </string>
+    <string name="str15">3) For 𝐴>0, it has two solutions: 𝑥 = 𝐴 and 𝑥 = −𝐴</string>
+    <string name="str16">We have already considered the designation of some sets on the number line: (−∞;∞),(𝑎;+∞),[𝑎;+∞),(−∞;𝑎],(−∞;𝑎)</string>
+    <string name="str17">If a number 𝑥 simultaneously satisfies the inequalities 𝑥 more than −4 and 𝑥 less than 5, then it satisfies the two-sided inequality  𝑥 greater than -4 but less than 5.</string>
+    <string name="str18">The set of all numbers satisfying the two-sided inequality 𝑥 more than -4 and less than 5 is called a numerical interval and is denoted as (−4;5).</string>
+    <string name="str19">Arithmetic progression is the numerical sequence in which each term, starting from the second, is equal to its predecessor plus the same number.</string>
+    <string name="str20">If {𝑎𝑛} is an arithmetic progression, then for any natural number 𝑛 the following formula is true: 𝑎𝑛+1=𝑎𝑛+𝑑
+The number 𝑑 is called the difference of the arithmetic progression.</string>
+    <string name="str21">The 𝑛-th term of the progression with the first term 𝑎1 and the difference 𝑑 is expressed by the following formula: 𝑎𝑛=𝑎1+𝑑(𝑛−1). This formula is called the formula for the 𝑛-th term of an arithmetic progression.</string>
+    <string name="str22">Given the first term of the arithmetic progression {𝑎𝑛} and the difference 𝑎1=0 and 𝑑=2. he first five members of the progression?</string>
+
 </resources>

@@ -11,27 +11,43 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
 import androidx.fragment.app.Fragment;
-
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.time.temporal.Temporal;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ProfileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
 public class ProfileFragment extends Fragment {
 
     View view;
@@ -41,158 +57,140 @@ public class ProfileFragment extends Fragment {
     TextView passwordTextView;
 
     Button logOut;
+    Button addTask;
     TextView logIn;
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public ProfileFragment() {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment UserFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ProfileFragment newInstance(String param1, String param2) {
-        ProfileFragment fragment = new ProfileFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_profile2, container, false);
-        String ret = "";
 
-        try {
-            InputStream inputStream = view.getContext().openFileInput("accInfo.txt");
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
 
-            if ( inputStream != null ) {
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                String receiveString = "";
-                StringBuilder stringBuilder = new StringBuilder();
-
-                while ( (receiveString = bufferedReader.readLine()) != null ) {
-                    stringBuilder.append("\n").append(receiveString);
-                }
-
-                inputStream.close();
-                ret = stringBuilder.toString();
-            }
-        }
-        catch (Exception e) {
-            Toast.makeText(view.getContext(),"File has mistake",Toast.LENGTH_SHORT).show();
-            Log.e("login activity", e.toString());
-        }
-        Toast.makeText(view.getContext(),ret,Toast.LENGTH_SHORT).show();
-
-       ////////////////////////////////////////
-
-        if (ret.length() == 0){
+        if (currentUser == null) {
             view = inflater.inflate(R.layout.fragment_profile, container, false);
-            gmailTextView = view.findViewById(R.id.text5);
-            passwordTextView = view.findViewById(R.id.text7);
-            register = view.findViewById(R.id.textSign);
-            register.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity() , Register.class);
-                    Bundle bundle2 = new Bundle();
-                    bundle2.putString("counter","2");
-                    intent.putExtras(bundle2);
-                    startActivity(intent);
-                }
-            });
-
-            logIn = view.findViewById(R.id.click);
-            logIn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startActivity(new Intent(getActivity(),MainActivity.class));
-                    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("user");
-                    databaseReference.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-
-                            for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                                String userId = snapshot.getKey(); // Assuming each user has a unique ID
-                                String name = snapshot.child("name").getValue(String.class);
-                                String gmail = snapshot.child("gmail").getValue(String.class);
-                                String password = snapshot.child("password").getValue(String.class);
-                                if(gmail.equals(gmailTextView.getText().toString()) && password.equals(passwordTextView.getText().toString())) {
-
-                                    try {
-                                        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(getContext().openFileOutput("accInfo.txt", Context.MODE_PRIVATE));
-                                        outputStreamWriter.write(name+","+gmail+","+password+",");
-                                        outputStreamWriter.close();
-                                    }
-                                    catch (IOException e) {
-                                        Log.e("Exception", "File write failed: " + e.toString());
-                                    }
-                                    break;
-                                }
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(DatabaseError databaseError) {
-
-                        }
-                    });
-
-                }
-            });
-
-
-        }else{
+            // Your existing login UI setup goes here
+            setupLoginUI();
+        } else {
+            // User is logged in
             view = inflater.inflate(R.layout.fragment_profile2, container, false);
-            logOut = view.findViewById(R.id.log_out);
-            logOut.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    try {
-                        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(getContext().openFileOutput("accInfo.txt", Context.MODE_PRIVATE));
-                        outputStreamWriter.write("");
-                        outputStreamWriter.close();
-                    }
-                    catch (IOException e) {
-                        Log.e("Exception", "File write failed: " + e.toString());
-                    }
-                    Intent intent = new Intent(getActivity(),MainActivity.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putString("counter","2");
-                    intent.putExtras(bundle);
-                    startActivity(intent);
-                }
-            });
+            // Your existing logged-in UI setup goes here
+            setupLoggedInUI();
         }
 
         return view;
+    }
+
+    private void setupLoginUI() {
+        gmailTextView = view.findViewById(R.id.text5);
+        passwordTextView = view.findViewById(R.id.text7);
+        register = view.findViewById(R.id.textSign);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Register.class);
+                Bundle bundle2 = new Bundle();
+                bundle2.putString("counter", "2");
+                intent.putExtras(bundle2);
+                startActivity(intent);
+            }
+        });
+
+        logIn = view.findViewById(R.id.click);
+        logIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginUser();
+            }
+        });
+    }
+
+    private void setupLoggedInUI() {
+        logOut = view.findViewById(R.id.log_out);
+        addTask = view.findViewById(R.id.add_tasks);
+
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                // Clear saved user data
+                clearUserData();
+                // Redirect to MainActivity or login screen
+                // Adjust this intent based on your app's flow
+                startActivity(new Intent(getActivity(), MainActivity.class));
+            }
+        });
+
+        addTask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AddNewTask.class);
+                startActivity(intent);
+            }
+        });
+
+        // Check and show "Add Task" button based on user email
+        showAddTaskButton();
+    }
+
+    private void loginUser() {
+        String email = gmailTextView.getText().toString().trim();
+        String password = passwordTextView.getText().toString().trim();
+
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(getContext(), "Please fill in all fields", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(getActivity(), task -> {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(getContext(), "Login successful", Toast.LENGTH_SHORT).show();
+                        // Reload the fragment to show logged-in UI
+                        getActivity().getSupportFragmentManager().beginTransaction().detach(ProfileFragment.this).attach(ProfileFragment.this).commit();
+                    } else {
+                        Toast.makeText(getContext(), "Login failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    private void clearUserData() {
+        try {
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(getContext().openFileOutput("accInfo.txt", Context.MODE_PRIVATE));
+            outputStreamWriter.write("");
+            outputStreamWriter.close();
+        } catch (IOException e) {
+            Log.e("Exception", "File write failed: " + e.toString());
+        }
+    }
+
+    private void saveUserDataToFile() {
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null) {
+            String name = currentUser.getDisplayName();
+            String email = currentUser.getEmail();
+
+            try {
+                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(getContext().openFileOutput("userData.txt", Context.MODE_PRIVATE));
+                outputStreamWriter.write(name + "," + email);
+                outputStreamWriter.close();
+            } catch (IOException e) {
+                Log.e("Exception", "File write failed: " + e.toString());
+            }
+        }
+    }
+
+    private void showAddTaskButton() {
+        String userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        if (userEmail != null && userEmail.equals("anahitqishmiryan49@gmail.com")) {
+            addTask.setVisibility(View.VISIBLE);
+        } else {
+            addTask.setVisibility(View.GONE);
+        }
     }
 }

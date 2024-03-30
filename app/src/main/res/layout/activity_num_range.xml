@@ -1,0 +1,122 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/polytech_back"
+    tools:context=".Equals1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Equals2"
+        tools:ignore="RedundantNamespace,ScrollViewSize">
+
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="250dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/back6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Back"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:typeface="serif"
+                tools:ignore="HardcodedText,SpUsage,TextSizeCheck,VisualLintButtonSize" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/l2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            </LinearLayout>
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="6dp"
+            android:text="Open and closed ranges on the numerical axis"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="42dp"
+            app:layout_constraintBottom_toTopOf="@id/first"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="3dp"
+            android:text="@string/str16"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="RtlHardcoded,SpUsage,TextSizeCheck" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="1dp"
+            android:gravity="center"
+            android:text="@string/str17"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="SpUsage,TextSizeCheck,TextContrastCheck,VisualLintLongText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:gravity="center"
+            android:text="Definition"
+            android:textColor="@color/white"
+            android:textSize="37dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/str18"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,VisualLintLongText" />
+
+
+        <Button
+            android:id="@+id/task_button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_marginEnd="75dp"
+            android:minWidth="140dp"
+            android:text="Tasks"
+            android:typeface="serif"
+            android:textSize="22dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,VisualLintButtonSize" />
+
+
+    </LinearLayout>
+</ScrollView>

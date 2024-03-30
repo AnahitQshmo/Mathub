@@ -1,0 +1,364 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/back5"
+                android:layout_width="182dp"
+                android:layout_height="wrap_content"
+                android:minWidth="140dp"
+                android:text="Back"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:typeface="serif"
+                tools:ignore="ButtonStyle,HardcodedText,SpUsage,TextSizeCheck" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal"
+            tools:ignore="UselessLeaf">
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp">
+
+            <!-- Your content here -->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="6dp"
+            android:gravity="center"
+            android:text="Equations involving modulus"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="42dp"
+            android:typeface="serif"
+            app:layout_constraintBottom_toTopOf="@id/first"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="3dp"
+            android:text="@string/fifth"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="RtlHardcoded,SpUsage,TextSizeCheck,VisualLintLongText" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="1dp"
+            android:gravity="center"
+            android:text="@string/sixth"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="SpUsage,TextSizeCheck,TextContrastCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/seventh"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="Examples:|8| = 8, |-3| = 3, |0|= 0"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="6dp"
+            android:gravity="center"
+            android:text="Module properties"
+            android:textColor="@color/white"
+            android:textSize="34dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text="@string/eight"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text="@string/ninth"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text="@string/ten"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text="@string/str11"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text="@string/str12"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="12dp"
+            android:gravity="left"
+            android:text="@string/str13"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck,VisualLintLongText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="left"
+            android:text="1) has no solution in the case of 𝐴 less 0 or A = 0"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="@string/str14"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="@string/str15"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="12dp"
+            android:gravity="center"
+            android:text="Examples"
+            android:textColor="@color/white"
+            android:textSize="32dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,VisualLintBounds" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text="First equation: |3x−1|=11, x = ?"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,VisualLintBounds" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text="Solution: 3x−1=11  or  3x-1=(-11)"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text="x = 4  or  x = (-3)"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text="Second equation: |2𝑦−1|=3, y = ?"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text="Solution: (2y-1)² = 3²"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,VisualLintBounds" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text=" 4y² - 4y + 1 = 9"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text=" 4y² - 4y + 8 = 0"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text=" y² - y - 2 = 0"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            android:text=" y = 2 and y = (-1)"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:typeface="serif"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,VisualLintBounds" />
+
+        <Button
+            android:id="@+id/task_button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_marginEnd="75dp"
+            android:minWidth="140dp"
+            android:text="Tasks"
+            android:textSize="22dp"
+            android:typeface="serif"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,VisualLintButtonSize" />
+
+
+    </LinearLayout>
+
+</ScrollView>
+
