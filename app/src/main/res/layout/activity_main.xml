@@ -17,6 +17,7 @@
         android:id="@+id/flFragment"
         app:layout_constraintHeight_percent="0.9"
         />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:background="@drawable/white_back"
         app:layout_constraintEnd_toEndOf="parent"

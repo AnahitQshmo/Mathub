@@ -8,14 +8,17 @@
     android:orientation="vertical"
     tools:context=".HomeFragment">
 
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="15dp"
         android:text="Hello!!!"
         android:textColor="@color/home_text"
         android:textSize="35sp" />
+
 
     <TextView
         android:layout_width="match_parent"
@@ -43,7 +46,8 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/ic_launcher_info_foreground">
+            android:src="@drawable/ic_launcher_info_foreground"
+            android:contentDescription="TODO">
         </ImageView>
 
     </LinearLayout>
@@ -68,6 +72,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                android:id="@+id/polytech_test"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
@@ -86,7 +91,8 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/ic_launcher_time_foreground" />
+                    android:src="@drawable/ic_launcher_time_foreground"
+                    android:contentDescription="TODO" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -244,22 +250,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="50dp"
-        android:text="Lets learn together"
+        android:layout_marginTop="25dp"
+        android:text="Let's learn together"
         android:textColor="@color/white"
         android:textSize="30sp" />
 
     <TextView
-
+        android:id="@+id/algebra"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="100dp"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="20dp"
+        android:layout_marginVertical="10dp"
         android:background="@drawable/buttonback"
         android:gravity="center"
         android:text="Mathematics"
         android:textColor="@color/white"
         android:textSize="30sp" />
+
 
 
 </LinearLayout>

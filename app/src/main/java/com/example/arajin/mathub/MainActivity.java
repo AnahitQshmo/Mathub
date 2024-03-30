@@ -24,7 +24,10 @@ public class MainActivity extends AppCompatActivity
         implements BottomNavigationView
         .OnNavigationItemSelectedListener {
 
-    BottomNavigationView bottomNavigationView;
+
+
+
+        BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity
         }else{
             bottomNavigationView.setSelectedItemId(R.id.n_school);
         }
+
         String ret = "";
 
         try {
@@ -89,6 +93,8 @@ public class MainActivity extends AppCompatActivity
             }
         }
     }
+
+    
     HomeFragment homeFragment = new HomeFragment();
     SchoolFragment schoolFragment = new SchoolFragment();
     ProfileFragment profileFragment = new ProfileFragment();

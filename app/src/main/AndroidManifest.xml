@@ -13,14 +13,68 @@
         android:theme="@style/Theme.Mathub"
         tools:targetApi="31">
         <activity
-            android:name=".Register"
+            android:name=".PercentTask"
             android:exported="false" />
+        <activity
+            android:name=".Percent"
+            android:exported="false" />
+        <activity
+            android:name=".Equation2Task"
+            android:exported="false" />
+        <activity
+            android:name=".ProgressionTask"
+            android:exported="false" />
+        <activity
+            android:name=".Progression"
+            android:exported="false" />
+        <activity
+            android:name=".RangeTask"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NumRange"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Equals2"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GeometryLessons"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EquationTask"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Equals1"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AlgebraLessons"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddNewTask"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PolytechTests"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Register"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".HighSchool"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
