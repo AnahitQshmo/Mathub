@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ayb_back"
-    android:orientation="vertical"
     tools:context=".HomeFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <Button
         android:id="@+id/back12"
@@ -71,7 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:text="A) 40%"
                 android:gravity="center"
                 android:textColor="@color/white"
@@ -106,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:text="B) 35%"
                 android:gravity="center"
                 android:textColor="@color/white"
@@ -146,7 +149,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="C) 19%"
                 android:textColor="@color/white"
@@ -179,7 +182,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:text="D) 90%"
                 android:gravity="center"
                 android:textColor="@color/white"
@@ -247,7 +250,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:text="A) 10%"
                 android:gravity="center"
                 android:textColor="@color/white"
@@ -282,7 +285,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:text="B) 15%"
                 android:gravity="center"
                 android:textColor="@color/white"
@@ -322,7 +325,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="C) 5%"
                 android:textColor="@color/white"
@@ -355,7 +358,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="D) 8%"
                 android:textColor="@color/white"
@@ -424,7 +427,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:text="A) 100%"
                 android:gravity="center"
                 android:textColor="@color/white"
@@ -459,7 +462,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:text="B) 50%"
                 android:gravity="center"
                 android:textColor="@color/white"
@@ -499,7 +502,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="C) 10.5%"
                 android:textColor="@color/white"
@@ -532,7 +535,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="D) 12%"
                 android:textColor="@color/white"
@@ -555,9 +558,9 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    </LinearLayout>
 
 
 
-
-</LinearLayout>
+</ScrollView>
 
