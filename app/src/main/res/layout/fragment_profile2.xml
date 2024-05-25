@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,68 +7,133 @@
     android:background="@drawable/back"
     tools:context=".ProfileFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <ImageView
-        android:id="@+id/profile_photo"
-        android:src="@drawable/ic_launcher_background"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/name_surname"
-        app:layout_constraintWidth_percent="0.4"/>
+        android:id="@+id/imageView"
+        android:src="@drawable/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"/>
+        <Button
+            android:id="@+id/creater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Click to change photo"/>
     <TextView
         android:id="@+id/name_surname"
-        app:layout_constraintTop_toBottomOf="@id/profile_photo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/score"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.6"
         android:text="name surname"
         android:gravity="center"/>
-    <TextView
+
+        <TextView
         android:id="@+id/score"
-        app:layout_constraintTop_toBottomOf="@id/name_surname"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/text1"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.6"
-        android:text="Your score: "
+        android:text="Your score is"
         android:gravity="center"/>
-    <TextView
-        android:id="@+id/text1"
-        app:layout_constraintTop_toBottomOf="@id/score"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.85"
-        android:text="Tests you've done"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tests you have done"
+            android:typeface="serif"
+            android:layout_marginLeft="10dp"
+            android:textSize="30sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="scroll down to see tests"
+            android:typeface="serif"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/polyetch_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Polytech"
+            android:typeface="serif"
+            android:layout_marginLeft="10dp"
+            android:textSize="30sp"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/polytech_lv"/>
+        </ScrollView>
+
+
+        <TextView
+            android:id="@+id/physmath_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Physmath"
+            android:typeface="serif"
+            android:layout_marginLeft="10dp"
+            android:textSize="30sp"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/physmath_lv"/>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/quantum_header"
+            android:typeface="serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quantum"
+            android:layout_marginLeft="10dp"
+            android:textSize="30sp"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/quantum_lv"/>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/ayb_header"
+            android:typeface="serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ayb"
+            android:layout_marginLeft="10dp"
+            android:textSize="30sp"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ayb_lv"/>
+        </ScrollView>
+
+
+
     <Button
         android:id="@+id/log_out"
         android:text="Log out"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        app:layout_constraintTop_toBottomOf="@id/text1"
-        app:layout_constraintBottom_toTopOf="@id/add_tasks"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.6"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         />
     <Button
         android:id="@+id/add_tasks"
         android:text="Add tasks"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        app:layout_constraintTop_toBottomOf="@id/log_out"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.6"
-        />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>
+</ScrollView>

@@ -36,6 +36,17 @@ The number 𝑑 is called the difference of the arithmetic progression.</string>
     <string name="str32">If you want to find the percent of a number, you need to:</string>
     <string name="str33">1) write the percentage in the form of a regular fraction.</string>
     <string name="str34">2) multiply the given number by the received fraction.</string>
-
+    <string-array name="languages">
+        <item>Polytech</item>
+        <item>Physmath</item>
+        <item>Ayb</item>
+        <item>Quantum</item>
+    </string-array>
+    <string-array name="variants">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
 
 </resources>

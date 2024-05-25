@@ -1,14 +1,13 @@
 package com.example.arajin.mathub;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Equation2Task extends AppCompatActivity {
     Button back10, optionA, optionB, optionC, optionD, optionA1, optionB1, optionC1, optionD1, optionA2, optionB2, optionC2, optionD2;
@@ -42,7 +41,6 @@ public class Equation2Task extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
         optionA.setBackgroundColor(Color.parseColor("#4f258a"));
         optionB.setBackgroundColor(Color.parseColor("#4f258a"));
@@ -217,5 +215,4 @@ public class Equation2Task extends AppCompatActivity {
             optionD2.setEnabled(false);
         }
     }
-
 }

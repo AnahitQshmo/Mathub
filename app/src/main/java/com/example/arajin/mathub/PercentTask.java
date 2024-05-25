@@ -1,12 +1,12 @@
 package com.example.arajin.mathub;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class PercentTask extends AppCompatActivity {
     Button back12, optionA, optionB, optionC, optionD, optionA1, optionB1, optionC1, optionD1, optionA2, optionB2, optionC2, optionD2;
@@ -187,8 +187,6 @@ public class PercentTask extends AppCompatActivity {
                 optionC2.setBackgroundColor(Color.GREEN);
             }
         }
-
-
         disableButtonsForCurrentQuestion(selectedOption);
     }
 

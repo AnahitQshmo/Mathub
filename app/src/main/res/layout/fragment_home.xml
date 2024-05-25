@@ -16,6 +16,7 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="15dp"
         android:text="Hello!!!"
+        android:typeface="serif"
         android:textColor="@color/home_text"
         android:textSize="35sp" />
 
@@ -26,6 +27,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="5dp"
         android:text="you have 4 pending tests"
+        android:typeface="serif"
         android:textColor="@color/home_text"
         android:textSize="20sp" />
 
@@ -40,6 +42,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="here are the tests"
+            android:typeface="serif"
             android:textColor="@color/home_text"
             android:textSize="20sp" />
 
@@ -78,6 +81,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="20dp"
                 android:text="Polytech High School"
+                android:typeface="serif"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
@@ -99,6 +103,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="here are the tests"
+                    android:typeface="serif"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -120,11 +125,13 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                android:id="@+id/physmath_test"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="20dp"
                 android:text="Physmath High School"
+                android:typeface="serif"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
@@ -145,6 +152,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="here are the tests"
+                    android:typeface="serif"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
             </LinearLayout>
@@ -169,11 +177,13 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                android:id="@+id/quantum_test"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="20dp"
                 android:text="Quantum College"
+                android:typeface="serif"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
@@ -194,6 +204,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="here are the tests"
+                    android:typeface="serif"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -215,11 +226,13 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                android:id="@+id/ayb_test"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="20dp"
                 android:text="Ayb School"
+                android:typeface="serif"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
@@ -240,6 +253,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="here are the tests"
+                    android:typeface="serif"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
             </LinearLayout>
@@ -252,6 +266,7 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="25dp"
         android:text="Let's learn together"
+        android:typeface="serif"
         android:textColor="@color/white"
         android:textSize="30sp" />
 
@@ -264,6 +279,7 @@
         android:background="@drawable/buttonback"
         android:gravity="center"
         android:text="Mathematics"
+        android:typeface="serif"
         android:textColor="@color/white"
         android:textSize="30sp" />
 

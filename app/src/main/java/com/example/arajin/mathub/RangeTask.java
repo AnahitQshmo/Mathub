@@ -1,13 +1,12 @@
 package com.example.arajin.mathub;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class RangeTask extends AppCompatActivity {
 
@@ -132,9 +131,6 @@ public class RangeTask extends AppCompatActivity {
         variant_A3.setBackgroundColor(Color.parseColor("#4f258a"));
         variant_B3.setBackgroundColor(Color.parseColor("#4f258a"));
 
-
-
-
         variant_A1.setEnabled(true);
         variant_B1.setEnabled(true);
         variant_C1.setEnabled(true);
@@ -170,8 +166,6 @@ public class RangeTask extends AppCompatActivity {
                 variant_B3.setBackgroundColor(Color.GREEN);
             }
         }
-
-
         disableButtonsForCurrentQuestion(Option);
     }
 
@@ -189,7 +183,6 @@ public class RangeTask extends AppCompatActivity {
         } else if (selectedOption == variant_A3 || selectedOption == variant_B3) {
             variant_A3.setEnabled(false);
             variant_B3.setEnabled(false);
-
         }
     }
 }

@@ -2,10 +2,6 @@ package com.example.arajin.mathub;
 
 import static android.content.ContentValues.TAG;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +9,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -91,11 +90,9 @@ public class Register extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(Register.this, "Verification email sent", Toast.LENGTH_SHORT).show();
                                 saveUserDataToDatabase();
                             } else {
                                 Log.e(TAG, "sendEmailVerification failed", task.getException());
-                                Toast.makeText(Register.this, "Failed to send verification email", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -115,6 +112,8 @@ public class Register extends AppCompatActivity {
         userData.put("name", name);
         userData.put("email", email);
         userData.put("password", password);
+        userData.put("score", "0");
+        userData.put("test", "W");
 
         userRef.child(userId).setValue(userData)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -126,7 +125,7 @@ public class Register extends AppCompatActivity {
                             startActivity(intent);
                             finish();
                         } else {
-                            Toast.makeText(Register.this, "Failed to save user data", Toast.LENGTH_SHORT).show();
+
                         }
                     }
                 });

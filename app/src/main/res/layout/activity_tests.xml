@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tests"
+    android:orientation="vertical"
+    android:background="@color/color4">
+
+
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/question_num"
+            android:layout_width="match_parent"
+            android:typeface="serif"
+            android:textSize="55dp"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Question 0"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/question_text"
+            android:layout_width="match_parent"
+            android:typeface="serif"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:layout_margin="30dp"
+            android:layout_height="wrap_content"
+            android:text="Question text"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:background="@drawable/unclicked_variant"
+                android:textColor="@color/black"
+                android:id="@+id/variant_a"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="A)"
+                android:layout_margin="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:textSize="20dp"
+                android:typeface="serif"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/variant_b"
+                />
+
+            <TextView
+                android:background="@drawable/unclicked_variant"
+                android:textColor="@color/black"
+                android:id="@+id/variant_b"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="B)"
+                android:layout_margin="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:textSize="20dp"
+                android:typeface="serif"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/variant_a"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:background="@drawable/unclicked_variant"
+                android:textColor="@color/black"
+                android:id="@+id/variant_c"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="C)"
+                android:layout_marginHorizontal="15dp"
+                android:textSize="20dp"
+                android:layout_margin="10dp"
+                android:typeface="serif"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/variant_d"
+                />
+
+            <TextView
+                android:background="@drawable/unclicked_variant"
+                android:textColor="@color/black"
+                android:id="@+id/variant_d"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="D)"
+                android:layout_margin="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:textSize="20dp"
+                android:typeface="serif"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/variant_c"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/back"
+        android:id="@+id/button_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:layout_margin="10dp"
+        android:typeface="serif"
+        android:backgroundTint="@color/color2"/>
+
+
+    <Button
+        android:backgroundTint="@color/color2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_next"
+        android:id="@+id/back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:typeface="serif"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

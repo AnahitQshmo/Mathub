@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,8 +34,6 @@ public class EquationTask extends AppCompatActivity {
         optionC2 = findViewById(R.id.option_c2);
         optionD2 = findViewById(R.id.option_d2);
 
-
-
         back3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,7 +41,6 @@ public class EquationTask extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
         optionA.setBackgroundColor(Color.parseColor("#4f258a"));
         optionB.setBackgroundColor(Color.parseColor("#4f258a"));
@@ -58,9 +54,6 @@ public class EquationTask extends AppCompatActivity {
         optionB2.setBackgroundColor(Color.parseColor("#4f258a"));
         optionC2.setBackgroundColor(Color.parseColor("#4f258a"));
         optionD2.setBackgroundColor(Color.parseColor("#4f258a"));
-
-
-
 
         optionA.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,6 +1,5 @@
 package com.example.arajin.mathub;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -12,12 +11,8 @@ public class AlgebraLessons extends AppCompatActivity {
     Button back1;
     TextView numeric_range;
     TextView equal;
-
     TextView progression;
-
     TextView percent;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

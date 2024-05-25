@@ -5,12 +5,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
-
-import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,7 +23,6 @@ public class HomeFragment extends Fragment {
     TextView geometry;
 
     public HomeFragment() {
-
     }
 
 
@@ -45,7 +41,6 @@ public class HomeFragment extends Fragment {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_home);
 
-
         if (getArguments() != null) {
             String mParam1 = getArguments().getString(ARG_PARAM1);
             String mParam2 = getArguments().getString(ARG_PARAM2);
@@ -54,21 +49,59 @@ public class HomeFragment extends Fragment {
 
     private void setContentView(int fragmentHome) {
     }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         TextView polytechTestTextView = view.findViewById(R.id.polytech_test);
         TextView mathLessonsTextView = view.findViewById(R.id.algebra);
+        TextView aybTestTextView = view.findViewById(R.id.ayb_test);
+        TextView physmathTestTextView = view.findViewById(R.id.physmath_test);
+        TextView quantumTestTextView = view.findViewById(R.id.quantum_test);
 
 
         polytechTestTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getActivity(), PolytechTests.class);
+                Intent intent = new Intent(getActivity(), RandomTest.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("school","Polytech");
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+        physmathTestTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getActivity(), RandomTest.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("school","Physmath");
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+        quantumTestTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getActivity(), RandomTest.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("school","Quantum");
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+
+        aybTestTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getActivity(), RandomTest.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("school","Ayb");
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
@@ -80,13 +113,6 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
-
         return view;
-
     }
-
-
-
-
 }

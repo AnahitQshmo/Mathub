@@ -1,11 +1,11 @@
 package com.example.arajin.mathub;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class NumRange extends AppCompatActivity {
     Button back6,task_button3;
@@ -31,7 +31,5 @@ public class NumRange extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 }

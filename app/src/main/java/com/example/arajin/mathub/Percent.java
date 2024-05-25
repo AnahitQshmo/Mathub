@@ -1,11 +1,11 @@
 package com.example.arajin.mathub;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Percent extends AppCompatActivity {
 
@@ -16,7 +16,6 @@ public class Percent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_percent);
 
-
         back11 = findViewById(R.id.back11);
         task_button5 = findViewById(R.id.task_button5);
         back11.setOnClickListener(new View.OnClickListener() {
@@ -26,7 +25,7 @@ public class Percent extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//
+
         task_button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

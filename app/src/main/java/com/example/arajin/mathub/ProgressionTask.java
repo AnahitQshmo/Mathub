@@ -1,16 +1,15 @@
 package com.example.arajin.mathub;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ProgressionTask extends AppCompatActivity {
-    Button back9, tarberakA1,tarberakB1,tarberakC1, tarberakD1,tarberakA2, tarberakB2, tarberakD2,tarberakC2;
+    Button back9, tarberakA1,tarberakB1,tarberakC1, tarberakD1,tarberakA2, tarberakB2, tarberakD2,tarberakC2,tarberakA3,tarberakB3,tarberakC3,tarberakD3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +26,11 @@ public class ProgressionTask extends AppCompatActivity {
         tarberakB2 = findViewById(R.id.tarberakB2);
         tarberakC2 = findViewById(R.id.tarberakC2);
         tarberakD2 = findViewById(R.id.tarberakD2);
+        tarberakA3 = findViewById(R.id.tarberakA3);
+        tarberakB3 = findViewById(R.id.tarberakB3);
+        tarberakC3 = findViewById(R.id.tarberakC3);
+        tarberakD3 = findViewById(R.id.tarberakD3);
+
 
 
         back9.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +51,10 @@ public class ProgressionTask extends AppCompatActivity {
         tarberakB2.setBackgroundColor(Color.parseColor("#4f258a"));
         tarberakC2.setBackgroundColor(Color.parseColor("#4f258a"));
         tarberakD2.setBackgroundColor(Color.parseColor("#4f258a"));
+        tarberakA3.setBackgroundColor(Color.parseColor("#4f258a"));
+        tarberakB3.setBackgroundColor(Color.parseColor("#4f258a"));
+        tarberakC3.setBackgroundColor(Color.parseColor("#4f258a"));
+        tarberakD3.setBackgroundColor(Color.parseColor("#4f258a"));
 
 
         tarberakA1.setOnClickListener(new View.OnClickListener() {
@@ -106,13 +114,39 @@ public class ProgressionTask extends AppCompatActivity {
             }
         });
 
+        tarberakA3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(tarberakA3, "A) -1");
+            }
+        });
 
+        tarberakB3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(tarberakB3, "B) 5");
+            }
+        });
 
+        tarberakC3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(tarberakC3, "C) 20");
+            }
+        });
+
+        tarberakD3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(tarberakD3, "D) 13");
+            }
+        });
     }
 
     private void checkAnswer(Button Option1, String right_answer1) {
         String correct1_ = "D) 28";
         String correct2_ = "B) 2";
+        String correct3_ = "A) -1";
 
         tarberakA1.setBackgroundColor(Color.parseColor("#4f258a"));
         tarberakB1.setBackgroundColor(Color.parseColor("#4f258a"));
@@ -122,6 +156,10 @@ public class ProgressionTask extends AppCompatActivity {
         tarberakB2.setBackgroundColor(Color.parseColor("#4f258a"));
         tarberakC2.setBackgroundColor(Color.parseColor("#4f258a"));
         tarberakD2.setBackgroundColor(Color.parseColor("#4f258a"));
+        tarberakA3.setBackgroundColor(Color.parseColor("#4f258a"));
+        tarberakB3.setBackgroundColor(Color.parseColor("#4f258a"));
+        tarberakC3.setBackgroundColor(Color.parseColor("#4f258a"));
+        tarberakD3.setBackgroundColor(Color.parseColor("#4f258a"));
 
 
         tarberakA1.setEnabled(true);
@@ -132,6 +170,10 @@ public class ProgressionTask extends AppCompatActivity {
         tarberakB2.setEnabled(true);
         tarberakC2.setEnabled(true);
         tarberakD2.setEnabled(true);
+        tarberakA3.setEnabled(true);
+        tarberakB3.setEnabled(true);
+        tarberakC3.setEnabled(true);
+        tarberakD3.setEnabled(true);
 
 
         if (Option1 == tarberakA1 || Option1 == tarberakB1 || Option1 == tarberakC1 || Option1 == tarberakD1) {
@@ -148,9 +190,14 @@ public class ProgressionTask extends AppCompatActivity {
                 Option1.setBackgroundColor(Color.RED);
                 tarberakB2.setBackgroundColor(Color.GREEN);
             }
+        } else if (Option1 == tarberakA3 || Option1 == tarberakB3 || Option1 == tarberakC3 || Option1 == tarberakD3) {
+            if (right_answer1.equals(correct3_)) {
+                Option1.setBackgroundColor(Color.GREEN);
+            } else {
+                Option1.setBackgroundColor(Color.RED);
+                tarberakA3.setBackgroundColor(Color.GREEN);
+            }
         }
-
-
         disableButtonsForCurrentQuestion(Option1);
     }
 
@@ -165,6 +212,11 @@ public class ProgressionTask extends AppCompatActivity {
             tarberakB2.setEnabled(false);
             tarberakC2.setEnabled(false);
             tarberakD2.setEnabled(false);
+        } else if (selectedOption == tarberakA3 || selectedOption == tarberakB3 || selectedOption == tarberakC3 || selectedOption == tarberakD3) {
+            tarberakA3.setEnabled(false);
+            tarberakB3.setEnabled(false);
+            tarberakC3.setEnabled(false);
+            tarberakD3.setEnabled(false);
         }
     }
 }
