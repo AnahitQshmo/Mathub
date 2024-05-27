@@ -23,39 +23,48 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Click to change photo"/>
+            android:text="@string/profile2_text1"/>
     <TextView
         android:id="@+id/name_surname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="name surname"
+        android:text="@string/profile2_text2"
+        android:textColor="@color/white"
+        android:textSize="32dp"
         android:gravity="center"/>
 
         <TextView
         android:id="@+id/score"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your score is"
+        android:text="@string/profile2_text3"
+        android:textSize="25dp"
         android:gravity="center"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tests you have done"
+            android:text="@string/profile2_text4"
             android:typeface="serif"
+            android:gravity="center"
+            android:textColor="@color/white"
             android:layout_marginLeft="10dp"
             android:textSize="30sp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="scroll down to see tests"
+            android:text="@string/profile2_text5"
             android:typeface="serif"
+            android:gravity="center"
+            android:textColor="@color/white"
             android:layout_marginLeft="10dp"
-            android:textSize="15sp"/>
+            android:textSize="13sp"/>
         <TextView
+            android:textColor="@color/white"
             android:id="@+id/polyetch_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Polytech"
+            android:text="@string/profile2_text6"
             android:typeface="serif"
             android:layout_marginLeft="10dp"
             android:textSize="30sp"/>
@@ -65,7 +74,9 @@
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/polytech_lv"/>
+                android:cacheColorHint="@color/white"
+                android:id="@+id/polytech_lv"
+                />
         </ScrollView>
 
 
@@ -73,7 +84,8 @@
             android:id="@+id/physmath_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Physmath"
+            android:text="@string/profile2_text7"
+            android:textColor="@color/white"
             android:typeface="serif"
             android:layout_marginLeft="10dp"
             android:textSize="30sp"/>
@@ -91,7 +103,8 @@
             android:typeface="serif"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Quantum"
+            android:text="@string/profile2_text8"
+            android:textColor="@color/white"
             android:layout_marginLeft="10dp"
             android:textSize="30sp"/>
         <ScrollView
@@ -108,7 +121,8 @@
             android:typeface="serif"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ayb"
+            android:text="@string/profile2_text9"
+            android:textColor="@color/white"
             android:layout_marginLeft="10dp"
             android:textSize="30sp"/>
         <ScrollView
@@ -124,14 +138,14 @@
 
     <Button
         android:id="@+id/log_out"
-        android:text="Log out"
+        android:text="@string/profile2_text10"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
     <Button
         android:id="@+id/add_tasks"
-        android:text="Add tasks"
+        android:text="@string/profile2_text11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"/>

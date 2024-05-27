@@ -72,7 +72,7 @@ public class EquationTask extends AppCompatActivity {
         optionC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkAnswer(optionC, "C) 4, -4");
+                checkAnswer(optionC, "C) 4");
             }
         });
 
@@ -140,7 +140,7 @@ public class EquationTask extends AppCompatActivity {
     }
 
     private void checkAnswer(Button selectedOption, String answer) {
-        String correctAnswer1 = "C) 4, -4";
+        String correctAnswer1 = "C) 4";
         String correctAnswer2 = "A) 10";
         String correctAnswer3 = "B) 5";
 

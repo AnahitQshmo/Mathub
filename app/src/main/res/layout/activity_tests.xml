@@ -18,7 +18,7 @@
             android:layout_marginTop="80dp"
             android:gravity="center"
             android:layout_height="wrap_content"
-            android:text="Question 0"/>
+            android:text="@string/quest"/>
 
         <TextView
             android:textColor="@color/black"
@@ -29,7 +29,7 @@
             android:gravity="center"
             android:layout_margin="30dp"
             android:layout_height="wrap_content"
-            android:text="Question text"/>
+            android:text="@string/quest2"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -128,7 +128,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:text="Next"
+        android:text="@string/next"
         android:textColor="@color/white"
         android:textSize="25dp"
         android:layout_margin="10dp"
@@ -145,7 +145,7 @@
         android:id="@+id/back"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Back"
+        android:text="@string/back3"
         android:layout_margin="10dp"
         android:textColor="@color/white"
         android:textSize="25dp"

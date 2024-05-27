@@ -16,10 +16,10 @@
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"/>
+        android:text="@string/back3"/>
     <TextView
         android:textColor="@color/white"
-        android:textSize="35sp"
+        android:textSize="37sp"
         android:typeface="serif"
         android:gravity="center"
         android:id="@+id/school_name"
@@ -30,9 +30,10 @@
         android:layout_marginVertical="15dp"
         android:layout_marginHorizontal="15dp"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:typeface="serif"
         android:id="@+id/text_one"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="flksbbfsff"/>
@@ -48,8 +49,9 @@
         android:layout_marginVertical="15dp"
         android:layout_marginHorizontal="15dp"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:typeface="serif"
+            android:gravity="center"
         android:id="@+id/text_two"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

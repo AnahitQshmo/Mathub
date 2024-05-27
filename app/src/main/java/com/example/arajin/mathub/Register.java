@@ -60,7 +60,7 @@ public class Register extends AppCompatActivity {
         }
 
         if (!password.equals(confirmPassword)) {
-            Toast.makeText(Register.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Register.this, "Passwords don't match", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -75,8 +75,7 @@ public class Register extends AppCompatActivity {
                                 Toast.makeText(Register.this, "User with this email already exists", Toast.LENGTH_SHORT).show();
                             } else {
                                 Log.e( "log",task.getException().getMessage());
-                                Toast.makeText(Register.this, "Registration failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                            }
+                              }
                         }
                     }
                 });

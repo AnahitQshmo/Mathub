@@ -46,6 +46,7 @@ import com.google.firebase.storage.StorageReference;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.LinkedList;
+import java.util.Objects;
 
 public class ProfileFragment extends Fragment {
 
@@ -93,13 +94,13 @@ public class ProfileFragment extends Fragment {
         registerResult();
         creater.setOnClickListener(view -> pickImage());
 
-        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        String userId = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
         StorageReference storageReference = FirebaseStorage.getInstance().getReference();
         StorageReference profileImageRef = storageReference.child("profile_images/").child(userId);
 
         profileImageRef.getDownloadUrl().addOnSuccessListener(uri -> {
             Glide.with(requireContext())
-                    .asBitmap() // Load the image as a Bitmap
+                    .asBitmap()
                     .load(uri)
                     .into(new CustomTarget<Bitmap>() {
                         @Override
@@ -111,11 +112,11 @@ public class ProfileFragment extends Fragment {
 
                         @Override
                         public void onLoadCleared(@Nullable Drawable placeholder) {
-                            // Handle any cleanup
+
                         }
                     });
         }).addOnFailureListener(exception -> {
-            // Handle any errors
+
         });
 
         imageView.setDrawingCacheEnabled(false);
@@ -142,7 +143,6 @@ public class ProfileFragment extends Fragment {
                                     Bitmap circularBitmap = getCircularBitmap(bitmap);
                                     imageView.setImageBitmap(circularBitmap);
 
-                                    // Upload the image to Firebase Storage
                                     saveProfileImageToFirebase(imageUri);
                                 } else {
                                     Toast.makeText(getContext(), "Failed to load image. Please try again.", Toast.LENGTH_SHORT).show();
@@ -151,7 +151,6 @@ public class ProfileFragment extends Fragment {
                                 Toast.makeText(getContext(), "No image selected", Toast.LENGTH_LONG).show();
                             }
                         } catch (Exception e) {
-                            Toast.makeText(getContext(), "An error occurred: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                             e.printStackTrace();
                         }
                     }
@@ -170,12 +169,10 @@ public class ProfileFragment extends Fragment {
         profileImageRef.putFile(imageUri)
                 .addOnSuccessListener(taskSnapshot -> {
                     profileImageRef.getDownloadUrl().addOnSuccessListener(uri -> {
-                        // Save the download URL to Firebase Database or Firestore
                         saveImageUrlToDatabase(uri.toString());
                     });
                 })
                 .addOnFailureListener(e -> {
-                    Toast.makeText(getContext(), "Failed to upload profile image. Please try again.", Toast.LENGTH_SHORT).show();
                 });
     }
 
@@ -184,10 +181,8 @@ public class ProfileFragment extends Fragment {
         DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users").child(userId);
         userRef.child("profileImageUrl").setValue(imageUrl)
                 .addOnSuccessListener(aVoid -> {
-                    Toast.makeText(getContext(), "Profile image saved successfully", Toast.LENGTH_SHORT).show();
-                })
+               })
                 .addOnFailureListener(e -> {
-                    Toast.makeText(getContext(), "Failed to save profile image URL. Please try again.", Toast.LENGTH_SHORT).show();
                 });
     }
 
@@ -283,7 +278,7 @@ public class ProfileFragment extends Fragment {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if (dataSnapshot.exists()) {
                         String scoreData = dataSnapshot.child("score").getValue(String.class);
-                        score.setText("Your score is "+scoreData);
+                        score.setText(getResources().getString(R.string.score) + scoreData);
                         String userNameData = dataSnapshot.child("name").getValue(String.class);
                         userName.setText(userNameData);
                         String testsData = dataSnapshot.child("test").getValue(String.class);
@@ -291,16 +286,16 @@ public class ProfileFragment extends Fragment {
                         for(int i = 0; i < passedTests.length;i++){
                             String[] pair = passedTests[i].split("<,>");
                             if(pair[0].equals("Polytech") || pair[0].equals("WPolytech")){
-                                polytech.add("Test "+pair[1]);
+                                polytech.add(getResources().getString(R.string.test) + pair[1]);
                             }
                             if(pair[0].equals("Physmath") || pair[0].equals("WPhysmath")){
-                                physmath.add("Test "+pair[1]);
+                                physmath.add(getResources().getString(R.string.test) + pair[1]);
                             }
                             if(pair[0].equals("Quantum") || pair[0].equals("WQuantum")){
-                                quantum.add("Test "+pair[1]);
+                                quantum.add(getResources().getString(R.string.test) + pair[1]);
                             }
                             if(pair[0].equals("Ayb") || pair[0].equals("WAyb")){
-                                ayb.add("Test "+pair[1]);
+                                ayb.add(getResources().getString(R.string.test) + pair[1]);
                             }
 
                         }
@@ -322,7 +317,7 @@ public class ProfileFragment extends Fragment {
             ListView listView = view.findViewById(id);
             listView.setAdapter(adapter);
         }else{
-            String[] newArr = {"You haven't solved tests yet"};
+            String[] newArr = {getResources().getString(R.string.just)};
             ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, newArr);
             ListView listView = view.findViewById(id);
             listView.setAdapter(adapter);

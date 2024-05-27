@@ -64,7 +64,7 @@ public class AddNewTask extends AppCompatActivity {
                         variant1.getText().toString().isEmpty() || variant2.getText().toString().isEmpty() ||
                         variant3.getText().toString().isEmpty() || variant4.getText().toString().isEmpty() ||
                         variant4.getText().toString().isEmpty()){
-                    Toast.makeText(AddNewTask.this, "Fill each field",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddNewTask.this, "Fill each field",Toast.LENGTH_LONG).show();
                 } else{
                     if(num.equals("10")){
                         firebaseFunction();

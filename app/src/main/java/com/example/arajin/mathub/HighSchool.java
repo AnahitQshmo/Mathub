@@ -6,11 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.io.InputStream;
 
 public class HighSchool extends AppCompatActivity {
     String counter;
@@ -20,7 +17,6 @@ public class HighSchool extends AppCompatActivity {
     TextView textViewTwo;
     String text1;
     String text2;
-    String text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,42 +38,33 @@ public class HighSchool extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.school_photo);
         text1 = " ";
         text2 = " ";
-        text = " ";
         textViewOne = findViewById(R.id.text_one);
         textViewTwo = findViewById(R.id.text_two);
-        try {
-            InputStream is = getAssets().open("high_school.txt");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);    is.close();
-            text = new String(buffer);
-        } catch (Exception e) {    e.printStackTrace();
-            text+=e;}
-        String[] contain= text.split("///");
+
         switch (counter){
             case "polytech":
-                text1 = contain[0];
-                text2 = contain[1];
+                text1 = getResources().getString(R.string.polytech1);
+                text2 = getResources().getString(R.string.polytech2);
                 imageView.setImageDrawable(getDrawable(R.drawable.polytech));
-                schoolName.setText("Polytech high school");
+                schoolName.setText(getResources().getString(R.string.polytech_name));
                 break;
             case "physmath":
-                text1 = contain[2];
-                text2 = contain[3];
+                text1 = getResources().getString(R.string.physmath1);
+                text2 = getResources().getString(R.string.physmath2);
                 imageView.setImageDrawable(getDrawable(R.drawable.physmath));
-                schoolName.setText("Physmath high school");
+                schoolName.setText(getResources().getString(R.string.physmath_name));
                 break;
             case "quantum":
-                text1 = contain[4];
-                text2 = contain[5];
+                text1 = getResources().getString(R.string.quantum1);
+                text2 = getResources().getString(R.string.quantum2);
                 imageView.setImageDrawable(getDrawable(R.drawable.quantum));
-                schoolName.setText("Quantum high school");
+                schoolName.setText(getResources().getString(R.string.quantum_name));
                 break;
             case "ayb":
-                text1 = contain[6];
-                text2 = contain[7];
+                text1 = getResources().getString(R.string.ayb1);
+                text2 = getResources().getString(R.string.ayb2);
                 imageView.setImageDrawable(getDrawable(R.drawable.ayb));
-                schoolName.setText("Ayb high school");
+                schoolName.setText(getResources().getString(R.string.ayb_name));
                 break;
         }
         textViewOne.setText(text1);

@@ -65,14 +65,13 @@ public class RandomTest extends AppCompatActivity {
                 String message = "";
                 int numberOfRoots = (int)dataSnapshot.getChildrenCount();
                 if(numberOfRoots == array.length){
-                    message = "You have done all tests";
+                    message = getResources().getString(R.string.alldone);
                     button.setVisibility(View.GONE);
                 }else{
                     randomNumber = randomNum(numberOfRoots,array);
                     message ="Test number " + randomNumber;
                 }
                 textView.setText(message);
-
             }
 
             @Override
@@ -99,7 +98,6 @@ public class RandomTest extends AppCompatActivity {
                 }
                 char[] arr = test.toCharArray();
                 databaseFunc(arr);
-
             }
 
             @Override
