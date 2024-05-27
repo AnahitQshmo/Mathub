@@ -107,13 +107,13 @@ public class ResultOfTest extends AppCompatActivity {
 
     private void updateListView() {
         for(int i = 0; i<10;i++){
-            arr[i] ="Your answer is " +arr[i] + " | Right answer is "+ arrR[i];
+            arr[i] =getResources().getString(R.string.answer1) +arr[i] + getResources().getString(R.string.answer2)+ arrR[i];
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arr);
         ListView listView = findViewById(R.id.resuld_lv);
         listView.setAdapter(adapter);
 
         TextView textScore = findViewById(R.id.score);
-        textScore.setText("Your score: "+score+"/10");
+        textScore.setText(getResources().getString(R.string.score) + score+"/10");
     }
 }

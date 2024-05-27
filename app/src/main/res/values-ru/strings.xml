@@ -210,5 +210,10 @@
     <string name="quantum_name">Квантовая средняя школа</string>
     <string name="test">Тест</string>
     <string name="just">Вы еще не решили тесты</string>
+    <string name="testnum">Номер теста</string>
+    <string name="q">Вопрос</string>
+    <string name="f">Конец</string>
+    <string name="answer1">Ваш ответ</string>
+    <string name="answer2">| Правильный ответ</string>
 
 </resources>

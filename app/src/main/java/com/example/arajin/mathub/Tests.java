@@ -178,9 +178,9 @@ public class Tests extends AppCompatActivity {
 
     }
     public void databaseFunc() {
-        questionNumber.setText("Question " + n);
+        questionNumber.setText(getResources().getString(R.string.q) + n);
         if(n == 10){
-            next.setText("Finish");
+            next.setText(getResources().getString(R.string.f));
         }
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();

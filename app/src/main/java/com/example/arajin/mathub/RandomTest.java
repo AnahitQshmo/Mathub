@@ -69,7 +69,7 @@ public class RandomTest extends AppCompatActivity {
                     button.setVisibility(View.GONE);
                 }else{
                     randomNumber = randomNum(numberOfRoots,array);
-                    message ="Test number " + randomNumber;
+                    message =getResources().getString(R.string.testnum) + randomNumber;
                 }
                 textView.setText(message);
             }

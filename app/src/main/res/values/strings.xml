@@ -210,6 +210,11 @@ Exams start at 9:00 am."</string>
     <string name="quantum_name">Quantum high school</string>
     <string name="test">Test</string>
     <string name="just">"You haven't solved tests yet"</string>
+    <string name="testnum">Test number</string>
+    <string name="q">Question</string>
+    <string name="f">Finish</string>
+    <string name="answer1">Your answer is</string>
+    <string name="answer2">| Right answer is</string>
 
 
 

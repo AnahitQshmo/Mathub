@@ -210,5 +210,10 @@
     <string name="quantum_name">Քվանտային ավագ դպրոց</string>
     <string name="test">Տեստ</string>
     <string name="just">Դուք դեռ թեստեր չեք լուծել</string>
+    <string name="testnum">Թեստի համարը</string>
+    <string name="q">Հարց</string>
+    <string name="f">Ավարտ</string>
+    <string name="answer1">Ձեր պատասխանն է</string>
+    <string name="answer2">| Ճիշտ պատասխանն է</string>
 
     </resources>
